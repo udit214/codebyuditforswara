@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fdf5e6;
+    overflow-x: hidden;
+  }
+  
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .landing-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .landing-page p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    background-color: white;
+    color: #ff758c;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #ffd6e8;
+  }
+  
+  .gallery {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6f91;
+  }
+  
+  .photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.5s;
+  }
+  
+  .photo-card p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #ff758c;
+    font-weight: bold;
+  }
+  
+  .photo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .photo-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .landing-page h1 {
+      font-size: 2.5rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+    }
+    .gallery h2 {
+      font-size: 2rem;
+    }
+  }
+  
